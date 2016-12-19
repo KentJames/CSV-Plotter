@@ -1,0 +1,11 @@
+This is a very simple CSV Plotter written in python 3. It will plot CSV's in three ways:
+
+- A single CSV file.
+- A whole directory of CSV files. Same columns for all. Not recursive.
+- Plot multiple CSV files into the same plot. Same columns for all.
+
+
+You need matplotlib to run this. Apart from that, vanilla python is all that is needed.
+
+To get instructions run: python3 generateplots.py --help
+
