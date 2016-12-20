@@ -207,7 +207,7 @@ class Output_Plot(CSV_Parser):
         if(self.generateplot==True):
             plt.show()
 
-class Multiple_Plot(CSV_Parser):
+class Multiple_Plot(object):
     '''Plots the same column from several csv files.'''
 
     def __init__(self,args):
