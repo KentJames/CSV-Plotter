@@ -44,6 +44,8 @@ class PlotGenerator_CLI(object):
         self.command.add_argument('--directory',dest='directory',action='store_true',help='Tells plotter to search a directory for csv files and try and plot every single one. Not  compatible with generate plot (will be ignored).')
         self.command.add_argument('--directoryext=',dest='directoryext',default='.pdf',help='Tells plotter what type of output file to save to. Default is PDF file.')
         self.command.add_argument('--multipleplots',dest='multipleplots',action='store_true',help='Look at multiple CSV files and take the same column from each and plot them all on same plot.')
+        self.command.add_argument('--title',dest='title',help = 'Plot Title.')
+        self.command.add_argument('--legend_title',dest = 'title',help='Legend Titles')
     
 
         self.args = self.command.parse_args()
@@ -176,8 +178,10 @@ class CSV_Parser(object):
         
         plt.xlabel(xdata_name)
         plt.ylabel(ydata_name)
+
+        
         plt.title(filename)
-        plt.legend(filename)
+        plt.legend([filename])
         #plt.show()
 
 # Child of CSV_Parser and outputs data collected to PNG file.
